@@ -1,0 +1,181 @@
+/* 
+    * Header
+    * Nav
+    * User info and options
+*/
+
+
+/** -------------------------------------------------------------------------------------------------------------*/
+/** -> Header */
+.header {
+    background-color: var(--darkblue-300);
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.header__content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-grow: 1;
+    padding: 0 10px;
+}
+
+.header__logo {
+    font-size: var(--size-24);
+    color: var(--blue-200);
+}
+
+.header__title {
+    color: var(--lightblue-100);
+    font-size: var(--size-16);
+    font-weight: var(--medium);
+}
+
+
+
+
+
+
+/** -------------------------------------------------------------------------------------------------------------*/
+/** -> Nav */
+.nav__links {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 15px;
+}
+
+.nav__link a {
+    color: var(--bluepurple-300);
+    font-weight: var(--medium);
+    text-decoration: none;
+    cursor: pointer;
+    padding: 3px;
+    
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav__link a:hover {
+    color: var(--bluepurple-100);
+}
+
+.nav__link--active a {
+    color: var(--bluepurple-100);
+}
+
+
+
+
+
+
+/** -------------------------------------------------------------------------------------------------------------*/
+/** -> User info and options */
+
+.user {
+    position: relative;
+    z-index: 300;
+}
+
+.user label {
+    height: 100%;
+    padding: 0 10px 0 0;
+    display: grid;
+    place-items: center;
+}
+
+.user label i {
+    font-size: var(--size-35);
+    color: var(--darkblue-100);
+}
+
+.user label i:hover {
+    cursor: pointer;
+    color: var(--lightblue-100);
+}
+
+.user:has(input:checked) .user__menu {
+    transform: translateX(0);
+}
+
+.user:has(input:checked) label i {
+    color: var(--lightblue-100);
+}
+
+.user__menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--darkblue-300);
+    border-radius: 0 0 0 var(--r-10);
+    overflow: hidden;
+    min-width: 250px;
+
+    transition: transform .3s;
+    transform: translateX(100%);
+}
+
+.user__menu-info {
+    padding: 20px;
+    width: max-content;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0 10px;
+    font-size: var(--size-16);
+    color: var(--lightblue-200);
+}
+
+.user__menu-info i {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    font-size: var(--size-40);
+    align-content: center;
+    color: var(--bluepurple-300);
+}
+
+.user__menu-options {
+    background-color: var(--lightblue-100);
+    display: grid;
+}
+
+.user__menu-options a {
+    color: var(--darkblue-400);
+    font-weight: var(--medium);
+    text-decoration: none;
+    padding: 10px 20px;
+    
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.user__menu-options i {
+    font-size: var(--size-16);
+}
+
+.user__menu-options a:hover {
+    background-color: var(--blue-300);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.user:has(input:checked) .backgroundUser {
+    display: block;
+}
+
+.backgroundUser {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0009;
+    
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}

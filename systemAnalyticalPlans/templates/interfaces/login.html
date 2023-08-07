@@ -1,0 +1,32 @@
+{% extends './base.html' %}
+{% load static %}
+
+
+
+{% block head %}
+<title>SCV Login</title>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+
+<link rel="stylesheet" href="{% static 'css/stylesLogin.css' %}">
+{% endblock %}
+
+
+
+{% block content %}
+    <div class="wave"></div>
+    <div class="container">
+        {% include './../layouts/header.html' %}
+        <main class="main">
+            {% include './../layouts/loginForm.html' %}
+            {% include './../layouts/rcForm.html' %}
+        </main>
+    </div>
+{% endblock %}
+
+
+{% block scripts %}
+<script src="{% static 'js/login.js' %}" type="module"></script>
+{% endblock %}
+

@@ -1,0 +1,19 @@
+{% extends './base.html' %}
+{% load static %}
+
+
+{% block head %}
+    <title>SCV Tareas</title>
+    <link rel="stylesheet" href="{% static 'css/stylesTasks.css' %}">
+{% endblock %}
+
+
+{% block content %}
+    <div class="container">
+        {% include './../layouts/header_nav.html' %}
+
+        <main class="main">
+            <h2>No hay tareas asignadas</h2>
+        </main>
+    </div>
+{% endblock %}

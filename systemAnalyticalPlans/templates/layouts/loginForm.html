@@ -1,0 +1,39 @@
+<form class="form" id="loginForm" action="{% url 'login' %}">
+    {% csrf_token %}
+    <h2 class="form__title">Ingresar al Sistema</h2>
+    
+    <div class="form__inputs">
+        <div class="form__group">
+            <label class="form__label">
+                <i class="icon-user"></i>Usuario
+            </label>
+            <input type="text" name="username" class="form__input input-active">
+            <div class="inputMessage">
+                <i class="icon-circle-exclamation"></i>
+                <span>mensaje</span>
+            </div>
+        </div>
+        
+        <div class="form__group">
+            <label class="form__label">
+                <i class="icon-lock"></i>Contraseña
+            </label>
+            <div class="form__input wrapper">
+                <input type="password" name="password" class="form__input input-active">
+                <input type="checkbox" id="checkbox">
+                <label for="checkbox" class="wrapper-label" id="wrapperLabel">
+                    <i class="icon-eye"></i>
+                    <i class="icon-eye-slash"></i>
+                </label>
+            </div>
+            <div class="inputMessage">
+                <i class="icon-circle-exclamation"></i>
+                <span>mensaje</span>
+            </div>
+        </div>
+
+        <button class="form__cta">Iniciar Sesión</button>
+    </div>
+    
+    <span class="form__link" id="linkRC">Recuperar Credenciales</span>
+</form>

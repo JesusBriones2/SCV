@@ -1,0 +1,167 @@
+<main class="main">
+    <div class="editButtons">
+        <button class="form__cta" id="saveVersion">Guardar</button>
+        <a href="{% url 'home' %}"><button class="form__cta" id="ctaSalir">Salir</button></a>
+    </div>
+ 
+    <div class="AnaliticalPlan" data-id="{{ idPlan }}">
+        <div class="AnaliticalPlan__title">
+            <h3>INSTITUTO SUPERIOR TECNOLÓGICO GUAYAQUIL</h3>
+            <h2>PLANIFICACIÓN MICROCURRICULAR - PROGRAMA ANALÍTICO</h2>
+            <div id="section1"></div>
+        </div>
+
+
+        <section class="apSection section1">
+            <div class="apSection__header">
+                <h3 class="apSection__title">APORTES TEÓRICOS, METODOLÓGICOS DE LA ASIGNATURA A LOS PROBLEMAS DE LA PROFESIÓN</h3>
+            </div>
+            <div class="apContent">
+                <div id="carreraDrop">
+                    <label>Carrera</label>
+                </div>
+                <div id="asignaturaDrop">
+                    <label>Asignatura</label>
+                </div>
+                <div id="periodoDrop">
+                    <label>Periodo</label>
+                </div>
+                <div>
+                    <label>Compo de formación</label>
+                    <input type="text" class="input-data" name="compoFormacion">
+                </div>
+                <div>
+                    <label>Prerequisitos</label>
+                    <input type="text" class="input-data" name="prerequisitos">
+                </div>
+                <div id="uocDrop">
+                    <label>Unidad de Organización Curricular</label>
+                </div>
+            </div>
+            <div id="section2"></div>
+        </section>
+
+
+        <section class="apSection">
+            <div class="apSection__header">
+                <h3 class="apSection__title">APORTES TEÓRICOS, METODOLÓGICOS DE LA ASIGNATURA A LOS PROBLEMAS DE LA PROFESIÓN</h3>
+            </div>
+            <div class="apContent">
+                <textarea class="input-data" name="aportePerfil"></textarea>
+            </div>
+            <div id="section3"></div>
+        </section>
+
+
+        <section class="apSection">
+            <div class="apSection__header">
+                <h3 class="apSection__title"> OBJETIVOS DE LA ASIGNATURA</h3>
+            </div>
+            <div class="apContent">
+                <div>
+                    <label>Objetivo General</label>
+                    <textarea class="input-data" name="objetivoGeneral"></textarea>
+                </div>
+                <div>
+                    <label>Objetivos específicos</label>
+                    <textarea class="input-data" name="objetivosEspecificos"></textarea>
+                </div>
+            </div>
+            <div id="section4"></div>
+        </section>
+
+
+        <section class="apSection">
+            <div class="apSection__header">
+                <h3 class="apSection__title">APORTES AL PERFIL DE EGRESO DE LA CARRERA</h3>
+            </div>
+            <div class="apContent">
+                <div>
+                    <label>Perfil de egreso de la carrera</label>
+                    <textarea class="input-data" name="perfilEgreso"></textarea>
+                </div>
+            </div>
+            <div id="section5"></div>
+        </section>
+
+
+        <section class="apSection">
+            <div class="apSection__header">
+                <h3 class="apSection__title">UNIDADES TEMÁTICAS</h3>
+            </div>
+            <div class="apContent">
+                <textarea  class="input-data" name="unidadesTematicas"></textarea>
+            </div>
+            <div id="section6"></div>
+        </section>
+
+
+        <section class="apSection">
+            <div class="apSection__header">
+                <h3 class="apSection__title">AMBIENTES DE APRENDIZAJE, MÉTODOS, PROCESOS DE ENSEÑANZA, PROCESOS GENERALES DE EVALUACIÓN PROPUESTOS PARA LA ASIGNATURA</h3>
+            </div>
+            <div class="apContent">
+                <textarea  class="input-data" name="ambienteAprendizaje"></textarea>
+            </div>
+            <div id="section7"></div>
+        </section>
+
+
+        <section class="apSection">
+            <div class="apSection__header">
+                <h3 class="apSection__title">PRODUCTOS ACADÉMICOS</h3>
+            </div>
+            <div class="apContent">
+                <div>
+                    <label>PRODUCTO ACADÉMICO FINAL DE LA ASIGNATURA</label>
+                    <textarea class="input-data" name="productoAcademico"></textarea>
+                </div>
+            </div>
+            <div id="section8"></div>
+        </section>
+
+
+        <section class="apSection">
+            <div class="apSection__header">
+                <h3 class="apSection__title">SISTEMA DE EVALUACIÓN</h3>
+            </div>
+            <div class="apContent apContent-sde">
+                <div>
+                    <label>GESTIÓN FORMATIVA 30%</label>
+                    <textarea class="input-data" name="gestionFormativa"></textarea>
+                </div>
+                <div>
+                    <label>GESTIÓN PRÁCTICA 30%</label>
+                    <textarea class="input-data" name="gestionPractica"></textarea>
+                </div>
+                <div>
+                    <label>EXAMEN 40%</label>
+                    <textarea class="input-data" name="examen"></textarea>
+                </div>
+            </div>
+            <div id="section9"></div>
+        </section>
+
+
+        <section class="apSection">
+            <div class="apSection__header">
+                <h3 class="apSection__title">REFERENCIAS</h3>
+            </div>
+            <div class="apContent">
+                <textarea class="input-data" name="referencias"></textarea>
+            </div>
+            <div id="section10"></div>
+        </section>
+
+
+        <section class="apSection">
+            <div class="apSection__header">
+                <h3 class="apSection__title">FIRMAS DE RESPONSABILIDAD</h3>
+            </div>
+            <div class="apContent">
+                <textarea class="input-data" name="firmas"></textarea>
+            </div>
+        </section>
+    </div>
+
+</main>

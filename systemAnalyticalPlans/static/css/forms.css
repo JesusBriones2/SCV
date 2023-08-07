@@ -1,0 +1,223 @@
+/* 
+    * Formularios de validaciones.
+*/
+
+
+/** -------------------------------------------------------------------------------------------------------------*/
+/** -> Validation forms */
+.form {
+    position: relative;
+    width: min(100%, 350px);
+    padding: 25px;
+    background-color: var(--white);
+    border-radius: var(--r-8);
+    box-shadow: var(--shadow);
+
+    display: grid;
+    justify-items: center;
+    gap: 35px;
+
+    color: var(--darkblue-200);
+}
+
+.form__title {
+    font-weight: var(--semiBold);
+    font-size: var(--size-18);
+}
+
+.form__inputs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form__group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form__label {
+    display: flex;
+    align-items: center;
+    gap: inherit;
+    
+    padding-left: 5px;
+    color: var(--darkblue-200);
+    font-weight: var(--semiBold);
+}
+
+.form__label i {
+    font-size: var(--size-16);
+}
+
+.form__input {
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    outline: none;
+    border-radius: var(--r-5);
+    border: var(--bd-1p5);
+    background-color: var(--white-100);
+    font-size: var(--size-16);
+    
+    color: var(--darkblue-200);
+    font-weight: var(--regular);
+}
+
+.form__input:hover,
+.form__input:focus {
+    border-color: var(--blue-300);
+}
+
+
+
+.wrapper {
+    display: flex;
+    overflow: hidden;
+    padding: 0;
+}
+
+.wrapper .form__input {
+    border: none;
+    animation: none;
+    height: 100%;
+}
+
+.wrapper:hover,
+.wrapper:has(.form__input:focus) {
+    border-color: var(--blue-300);
+}
+
+.wrapper-label {
+    display: none;
+    place-items: center;
+    width: 40px;
+    height: 100%;
+    cursor: pointer;
+    user-select: none;
+    font-size: var(--size-16);
+}
+
+.wrapper #checkbox,
+.wrapper:has(#checkbox:checked) .icon-eye-slash,
+.wrapper:has(#checkbox:not(:checked)) .icon-eye {
+    /* Función toggle para los iconos de ojos. */
+    display: none;
+}
+
+.wrapper:hover .wrapper-label,
+.wrapper:has(.form__input:focus) .wrapper-label {
+    display: grid;
+}
+
+.wrapper:hover .form__input,
+.wrapper:has(.form__input:focus) .form__input {
+    padding-right: 0;
+}
+
+
+
+.inputMessage {
+    display: none;
+    align-items: center;
+    gap: inherit;
+    
+    font-weight: var(--medium);
+    color: var(--red-200);
+    user-select: none;
+}
+
+.inputMessage--active {
+    display: flex;
+}
+
+.form__group:has(.inputMessage--active) .form__input {
+    border-color: var(--red-200);
+    animation: shake .2s;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+    100% { transform: translateX(0); }
+}
+
+
+
+.form__cta {
+    width: 100%;
+    height: 40px;
+    border: none;
+    background-color: var(--darkblue-200);
+    border-radius: var(--r-5);
+
+    font-size: var(--size-16);
+    font-weight: var(--semiBold);
+    color: var(--white);
+    
+    display: grid;
+    place-items: center;
+}
+
+.form__cta:hover {
+    cursor: pointer;
+    background-color: var(--blue-300);
+}
+
+.form__cta:active {
+    background-color: var(--blue-200);
+}
+
+.form__cta i {
+    font-size: var(--size-22);
+    animation-name: spinner;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes spinner {
+    100% { transform: rotate(360deg); }
+}
+
+
+
+.form__link {
+    font-weight: var(--regular);
+    color: var(--gray-200);
+    cursor: pointer;
+    text-decoration: underline;
+    user-select: none;
+}
+
+.form__link:hover {
+    color: var(--darkblue-200);
+}
+.form__link:active {
+    color: var(--gray-200);
+}
+
+
+
+
+.icon-arrow-left {
+    position: absolute;
+    font-size: var(--size-22);
+    top: 15px;
+    left: 15px;
+    color: var(--darkblue-200);
+}
+
+.icon-arrow-left:hover {
+    cursor: pointer;
+    color: var(--blue-200);
+}
+
+
+
+
+
+

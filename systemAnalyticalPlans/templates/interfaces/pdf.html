@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        
+        .plan__title {
+            display: flex;
+            padding: 20px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding-top: 10px;
+            padding-bottom: 7px;
+            padding-left: 10px;
+            text-align: left;
+            padding-right: 10px;
+        }
+
+        .title-section {
+            text-align: center;
+            background-color: #b8cffb;
+        }
+
+        .w1 {
+            min-width: 100px;
+        }
+
+    </style>
+</head>
+<body>
+
+
+    <table border="1">
+        <tr>
+            <th colspan="13" class="plan__title">
+                <h4>INSTITUTO SUPERIOR TECNOLÓGICO GUAYAQUIL</h4>
+                <h3 style="margin-top: 10px;">PLANIFICACIÓN MICROCURRICULAR - PROGRAMA ANALÍTICO</h3>
+            </th>
+        </tr>
+
+
+
+        <tr>
+            <th colspan="13" class="title-section">A) DATOS INFORMATIVOS</th>
+        </tr>
+        <tr>
+            <th>Carrera</th>
+            <td colspan="12">{{drop.carreraDrop|linebreaksbr}}</td>
+        </tr>
+        <tr>
+            <th>Asignatura</th> <td>{{drop.asignaturaDrop|linebreaksbr}}</td>
+            <th>Código</th> <td>{{code|linebreaksbr}}</td>
+            <th>Campo de formación</th> <td colspan="2">{{field.compoFormacion|linebreaksbr}}</td>
+        </tr>
+        <tr>
+            <th>Período</th> <td>{{drop.periodoDrop|linebreaksbr}}</td>
+            <th>Prerrequisitos</th> <td>{{field.prerequisitos|linebreaksbr}}</td>
+            <th>Correquisitos</th> <td colspan="2" class="w1"></td>
+        </tr>
+        <tr>
+            <th>Unidad de Organización Curricular</th> <td colspan="12">{{drop.uocDrop|linebreaksbr}}</td> 
+        </tr>
+
+
+
+        <tr>
+            <th colspan="13" class="title-section">B) APORTES TEÓRICOS, METODOLÓGICOS DE LA ASIGNATURA A LOS PROBLEMAS DE LA PROFESIÓN</th>
+        </tr>
+        <tr>
+            <td colspan="13">{{field.aportePerfil|linebreaksbr}}</td>
+        </tr>
+
+
+
+        <tr>
+            <th colspan="13" class="title-section">C) OBJETIVOS DE LA ASIGNATURA</th>
+        </tr>
+        <tr>
+            <th>Objetivo General</th> <td colspan="12">{{field.objetivoGeneral|linebreaksbr}}</td>
+        </tr>
+        <tr>
+            <th>Objetivos específicos</th> <td colspan="12">{{field.objetivosEspecificos|linebreaksbr}}</td>
+        </tr>
+
+
+
+        <tr>
+            <th colspan="13" class="title-section">D) APORTES AL PERFIL DE EGRESO DE LA CARRERA</th>
+        </tr>
+        <tr>
+            <th>Perfil de egreso de la carrera</th><td colspan="12">{{field.perfilEgreso|linebreaksbr}}</td>
+        </tr>
+        <tr>
+            <td colspan="13"></td>
+        </tr>
+
+
+
+        <tr>
+            <th colspan="13" class="title-section">E) UNIDADES TEMÁTICAS</th>
+        </tr>
+        <tr>
+            <td colspan="13">{{field.unidadesTematicas|linebreaksbr}}</td>
+        </tr>
+
+
+
+        <tr>
+            <th colspan="13" class="title-section">F) AMBIENTES DE APRENDIZAJE, MÉTODOS, PROCESOS DE ENSEÑANZA, PROCESOS GENERALES DE EVALUACIÓN PROPUESTOS PARA LA ASIGNATURA</th>
+        </tr>
+        <tr>
+            <td colspan="13">{{field.ambienteAprendizaje|linebreaksbr}}</td>
+        </tr>
+
+
+
+        <tr>
+            <th colspan="13" class="title-section">G) PRODUCTOS ACADÉMICOS</th>
+        </tr>
+        <tr>
+            <td colspan="13">{{field.productoAcademico|linebreaksbr}}</td>
+        </tr>
+
+
+
+
+        <tr>
+            <th colspan="13" class="title-section">H) SISTEMA DE EVALUACIÓN</th>
+        </tr>
+        <tr>
+            <th colspan="2" class="title-section">GESTIÓN FORMATIVA 30% </th>
+            <th colspan="2" class="title-section">GESTIÓN PRÁCTICA 30%</th>
+            <th colspan="2" class="title-section">EXAMEN 40%</th>
+        </tr>
+        <tr>
+            <td colspan="2">{{field.gestionFormativa|linebreaksbr}}</td>
+            <td colspan="2">{{field.gestionPractica|linebreaksbr}}</td>
+            <td colspan="2">{{field.examen|linebreaksbr}}</td>
+        </tr>
+
+
+
+        <tr>
+            <th colspan="13" class="title-section">I) REFERENCIAS (actualizada, hasta 5 años)</th>
+        </tr>
+        <tr>
+            <td colspan="13">{{field.referencias|linebreaksbr}}</td>
+        </tr>
+
+
+        <tr>
+            <th colspan="13" class="title-section">I) FIRMAS DE RESPONSABILIDAD</th>
+        </tr>
+        <tr>
+            <td colspan="13">{{field.firmas|linebreaksbr}}</td>
+        </tr>
+    </table>
+    
+
+</body>
+</html>

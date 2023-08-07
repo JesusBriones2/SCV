@@ -1,0 +1,19 @@
+<form class="form form--hide" id="rcForm" action="{% url 'sendEmail' %}">
+    {% csrf_token %}
+    <i class="icon-arrow-left"></i>
+    
+    <h2 class="form__title">Recuperar Credenciales</h2>
+    
+    <div class="form__inputs">
+        <div class="form__group">
+            <label class="form__label"><i class="icon-envelope"></i>Correo Electrónico</label>
+            <input type="email" name="email" class="form__input input-active">
+            <div class="inputMessage">
+                <i class="icon-circle-exclamation"></i>
+                <span>mensaje</span>
+            </div>
+        </div>
+        
+        <button class="form__cta">Enviar</button>
+    </div>
+</form>

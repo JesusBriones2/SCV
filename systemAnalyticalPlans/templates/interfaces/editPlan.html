@@ -1,0 +1,22 @@
+{% extends './base.html' %}
+{% load static %}
+
+
+{% block head %}
+    <title>SCV Editar Plan</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+{% endblock %}
+
+
+{% block content %}
+    <div class="container">
+        {% include './../layouts/header_nav.html' %}
+        {% include './../layouts/sideNav.html' %}
+        {% include './../layouts/analiticalPlan.html' %}
+    </div>
+{% endblock %}
+
+
+{% block scripts %}
+    <script src="{% static 'js/editPlan.js' %}" type="module"></script>
+{% endblock %}

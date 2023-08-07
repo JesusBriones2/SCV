@@ -1,0 +1,38 @@
+{% extends './header.html' %}
+
+{% block nav %}
+<nav class="nav">
+    <ul class="nav__links" id="nav__links" data-active="{{ navTab }}">
+        <li class="nav__link" data-id="0">
+            <a href="{% url 'home' %}"><i class="icon-file-lines"></i>Planes</a>
+        </li>
+        <li class="nav__link" data-id="1"> 
+            <a href="{% url 'tasks' %}"><i class="icon-list-check"></i>Tareas</a> 
+        </li>
+    </ul>
+</nav>
+{% endblock %}
+
+
+{% block userInfo %}
+<div class="user" id="userMenu">
+    <div class="backgroundUser"></div>
+    <label for="user-checkbox"><i class="icon-circle-user"></i></label>
+    <input type="checkbox" id="user-checkbox" hidden>
+    <div class="user__menu">
+        <div class="user__menu-info">
+            <i class="icon-circle-user"></i>
+            <span>{{user_names}}</span>
+            <span>{{user_surnames}}</span>
+        </div>
+        <div class="user__menu-options">
+            <a href="#">
+                <i class="icon-key"></i>Cambiar Contraseña</a>
+            <a href="#">
+                <i class="icon-id-badge"></i>Agregar foto perfil</a>
+            <a href="/logout/">
+                <i class="icon-right-from-bracket"></i>Salir</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends './base.html' %}
+{% load static %}
+
+
+
+{% block head %}
+<title>SCV Home</title>
+<link rel="stylesheet" href="{% static 'css/stylesHome.css' %}">
+{% endblock %}
+
+
+
+{% block content %}
+<div class="container">
+    {% include './../layouts/header_nav.html' %}
+    
+    <main class="main" id="main">
+        <div class="cardCta-background">
+            <form class="cardCta" method="POST" action="{% url 'createPlan' %}">
+                {% csrf_token %}
+                <div class="cardCta__description">
+                    <i class="icon-plus cardCta__icon"></i>
+                    <h3 class="cardCta__title">Crear nuevo plan analítico</h3>
+                </div>
+                <input type="text" required placeholder="Nombre del plan" class="form__input" name="namePlan">
+                <button class="form__cta ctaCreatePlan">crear</button>
+            </form>
+        </div>
+
+        <div class="planContainer" id="planContainer"></div>
+
+
+        <div class="homeBackground" id="homeBackground">
+            <div class="form">
+                <div class="form__titles">
+                    <h2 class="form__title">Eliminar Plan Analítico</h2>
+                    <h2 class="form__title title2">Nombre del plan analitico de programacon</h2>
+                </div>
+                <div class="form__ctas">
+                    <button class="form__cta" id="ctaAceptar">Aceptar</button>
+                    <button class="form__cta" id="ctaCancelar">Cancelar</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="toastContainer" id="toastContainer"></div>
+    </main>
+</div>
+{% endblock %}
+
+
+
+{% block scripts %}
+<script src="{% static 'js/home.js' %}" type="module"></script>
+{% endblock %}

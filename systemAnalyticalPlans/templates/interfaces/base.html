@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts and icons -->
+    <link rel="shortcut icon" href="{% static 'assets/img/favicon.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'assets/icons/style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/fonts/font.css' %}">
+
+    <!-- Global styles -->
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/global.css' %}">
+
+    <!-- Components -->
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/forms.css' %}">
+    <link rel="stylesheet" href="{% static 'css/components.css' %}">
+
+
+    {% block head %}{% endblock %}
+
+</head>
+<body>
+
+    {% block content %}{% endblock %}
+    
+
+    <script src="{% static 'js/global.js' %}"></script>
+    {% block scripts %}{% endblock %}
+
+</body>
+</html>

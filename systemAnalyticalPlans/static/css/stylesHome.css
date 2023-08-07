@@ -1,0 +1,70 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.ctaCreatePlan {
+    background-color: var(--blue-300);
+    width: max-content;
+}
+
+.planContainer {
+    display: grid;
+    justify-items: center;
+    gap: 5px;
+    width: 100%;
+}
+
+.cardCta-background {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    background-color: var(--white-100);
+}
+
+
+.homeBackground {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0009;
+    padding: 10%;
+}
+
+.homeBackground .form {
+    margin: 0 auto;
+}
+
+.homeBackground  .form__titles {
+    text-align: center;
+    display: grid;
+    gap: 10px;
+}
+
+.homeBackground  .form__ctas {
+    display: flex;
+    gap: 20px;
+}
+
+.homeBackground .form__cta {
+    padding: 0 20px;
+    background-color: var(--blue-300);
+}
+
+.homeBackground .form__cta:hover {
+    background-color: var(--blue-200);
+}
+
+.homeBackground .form__title:nth-child(1) {
+    font-size: var(--size-16);
+    color: var(--red-200);
+}

@@ -1,0 +1,14 @@
+.main {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.form {
+    position: absolute;
+    top: 40px;
+}
+
+.form--hide {
+    display: none;
+}
