@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,11 +26,7 @@ SECRET_KEY = 'django-insecure-n=go^0!^8z0y9t)ej$rrse@eg7e*m$1u$2!9@by(ufubo*k3%p
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    'chavico.smartpyme.ec',
-    'localhost',
-    '127.0.0.1'
-]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -41,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'systemAnalyticalPlans'
+    'web',
+    'SCV_AnalyticalPlans',
 ]
 
 MIDDLEWARE = [
@@ -55,15 +53,12 @@ MIDDLEWARE = [
     'django.middleware.cache.CacheMiddleware'
 ]
 
-
-CACHE_MIDDLEWARE_SECONDS = 0
-CACHE_MIDDLEWARE_KEY_PREFIX = 'SCVPA'
 ROOT_URLCONF = 'admin.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -139,5 +134,4 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'sistemascvpa@gmail.com'  # Aquí debes poner tu dirección de correo de Gmail
-EMAIL_HOST_PASSWORD = 'bcctekhuubugtbks'    # Aquí debes poner tu contraseña de Gmail (o una contraseña de aplicación si tienes la autenticación de 2 factores activada)
-
+EMAIL_HOST_PASSWORD = 'guoj ieop rwtx tias'    # Aquí debes poner tu contraseña de Gmail (o una contraseña de aplicación si tienes la autenticación de 2 factores activada)
