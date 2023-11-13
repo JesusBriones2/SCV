@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>scvpa login</title>
+    <link rel="icon" type="image/svg+xml" href="/public/icon.svg" />
+
+    <script
+      src="https://kit.fontawesome.com/40d9a826da.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  
+  <body>
+
+    <div class="app">
+      <div class="app__background"></div>
+      
+      <header class="header">
+        <section class="header__section">
+          <img
+            class="header__logo"
+            src="/public/icon.svg"
+            alt="logo-de-la-pagina"
+          />
+          <h1 class="header__title">
+            SCV Planes Analíticos Microcurriculares
+          </h1>
+        </section>
+      </header>
+
+      <main>
+        <form 
+          class="mt-5 mx-auto w-[90%] max-w-[350px] shadow-lg rounded-xl p-7 grid gap-7 bg-white"
+        >
+          <h3 class="text-center font-[700] text-xl">
+            Ingresar al Sistema
+          </h3>
+
+          <fieldset class="font-[600] grid gap-5">
+            <label class="flex flex-wrap gap-x-2 gap-y-1">
+              <div class="flex gap-2 items-center">
+                <i class="fa-solid fa-user"></i>
+                <span>Usuario</span>
+              </div>
+              <input class="input" type="text" />
+              <div hidden>
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <!--!borra contenido  -->
+                <p>Debes completar el campo</p>
+              </div>
+            </label>
+
+            <label>
+              <i class="fa-solid fa-lock"></i>
+              <span>Clave</span>
+              <div>
+                <input class="input" type="password" />
+                <span>
+                  <i class="fa-solid fa-eye"></i>
+                  <i class="fa-solid fa-eye-slash"></i>
+                </span>
+              </div>
+            </label>
+
+            <button>Iniciar Sesión</button>
+          </fieldset>
+
+          <p>Recuperar Credenciales</p>
+        </form>
+
+        <form class="hidden">
+          <h3>
+            <i class="fa-solid fa-arrow-left"></i>
+            Recuperar Credenciales
+          </h3>
+
+          <fieldset>
+            <label>
+              <i class="fa-solid fa-envelope"></i>
+              <span>Correo Electrónico</span>
+              <input type="email" />
+            </label>
+
+            <button>Enviar</button>
+          </fieldset>
+        </form>
+      </main>
+    </div>
+
+
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
