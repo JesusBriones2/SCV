@@ -1,0 +1,9 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--lightblue-100);
+}
+
+.app {
+    height: 100dvh;
+}
+

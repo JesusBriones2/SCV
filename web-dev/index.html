@@ -19,9 +19,9 @@
       <div class="app__background"></div>
       
       <header class="header">
-        <section class="header__section">
+        <section class="header__logo">
           <img
-            class="header__logo"
+            class="header__img"
             src="/public/icon.svg"
             alt="logo-de-la-pagina"
           />
@@ -32,36 +32,37 @@
       </header>
 
       <main>
-        <form 
-          class="mt-5 mx-auto w-[90%] max-w-[350px] shadow-lg rounded-xl p-7 grid gap-7 bg-white"
-        >
-          <h3 class="text-center font-[700] text-xl">
-            Ingresar al Sistema
-          </h3>
 
-          <fieldset class="font-[600] grid gap-5">
-            <label class="flex flex-wrap gap-x-2 gap-y-1">
-              <div class="flex gap-2 items-center">
-                <i class="fa-solid fa-user"></i>
-                <span>Usuario</span>
-              </div>
-              <input class="input" type="text" />
+        <form class="form">
+          <h3 class="form__name">Ingresar al Sistema</h3>
+
+          <fieldset class="form__set">
+            <label class="form__label">
+              <i class="fa-solid fa-user"></i>
+              <span>Usuario</span>
+              <input class="form__input" type="text" />
+
               <div hidden>
                 <i class="fa-solid fa-circle-exclamation"></i>
-                <!--!borra contenido  -->
                 <p>Debes completar el campo</p>
               </div>
+            
             </label>
 
-            <label>
+            <label class="form__label">
               <i class="fa-solid fa-lock"></i>
               <span>Clave</span>
-              <div>
-                <input class="input" type="password" />
-                <span>
+              <div class="form__input form__input-dif">
+                <input class="form__input form__input" type="password" />
+                <span class="input-icons">
                   <i class="fa-solid fa-eye"></i>
                   <i class="fa-solid fa-eye-slash"></i>
                 </span>
+              </div>
+
+              <div hidden>
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <p>Debes completar el campo</p>
               </div>
             </label>
 
@@ -92,6 +93,6 @@
 
 
 
-    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/js/main.js"></script>
   </body>
 </html>

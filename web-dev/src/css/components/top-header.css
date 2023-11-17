@@ -1,0 +1,21 @@
+.header {
+    background-color: var(--darkblue-300);
+    height: 60px;
+    display: flex;
+    padding: 15px;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header__img {
+    width: auto;
+    height: 100%;
+}
+
+.header__title {
+    color: var(--white);
+}
